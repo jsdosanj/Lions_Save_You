@@ -41,8 +41,10 @@
         // Perform insertion
         if (mysqli_query($conn, $query))
           echo "<h1>Successfully added $un to database!</h1>";
+          header("Location: https://jsdosanj.github.io/Lions_Save_You/");
         else
           echo "<font color='red'>Error adding user.</font>";
+          header("Location: login_signup.html")
 
       } else { // error in validation
         echo "<font color='red'>$error_msg</font>";
