@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <title>Lions save you</title> 
+
 <style>
   @-ms-viewport{ width: device-width;}
   body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
@@ -25,17 +26,13 @@
 <!-- Icon Bar -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <img src="https://cdn.24.co.za/files/Cms/General/d/6653/3771fced36a4475d99fd40b3b8e47dc5.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
   <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-car w3-xxlarge"></i>
     <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PHOTOS</p>
   </a>
   <a href="login_signup.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-user w3-xxlarge"></i>
@@ -50,9 +47,8 @@
 <!-- Navbar -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="about.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
     <a href="login_signup.html" class="w3-bar-item w3-button" style="width:25% !important">LOGIN</a>
     <a href="contact.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div> 
@@ -62,11 +58,11 @@
 <div class="w3-padding-large" id="main">
 <body class="w3-black">
   <div class="login-wrap w3-black">
-  <div class="login-html">
+  <div class="login-html" id='signupForm'>
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
     <div class="login-form">
-      <form class="sign-in-htm" action="process_form.php" method="GET">
+      <form class="sign-in-htm"  id="register" action="process_form.php" method="GET">
         <div class="group">
           <label for="user" class="label">Username</label>
           <input id="username" name="username" type="text" class="input">
@@ -74,10 +70,6 @@
         <div class="group">
           <label for="pass" class="label">Password</label>
           <input id="password" name="password" type="password" class="input" data-type="password">
-        </div>
-        <div class="group">
-          <input id="check" type="checkbox" class="check" checked>
-          <label for="check"><span class="icon"></span> Keep me Signed in</label>
         </div>
         <div class="group">
           <input type="submit" class="button" value="Sign In">
@@ -87,18 +79,30 @@
           <a href="#forgot">Forgot Password?</a>
         </div>
       </form>
-      <form class="sign-up-htm" action="process_form.php" method="POST">
+      <form class="sign-up-htm"  id='signupForm' action="process_form.php" method="POST">
+        <div class="group">
+          <label for="user" class="label">First Name</label>
+          <input id="first_name" name="first_name" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="user" class="label">Last Name</label>
+          <input id="last_name" name="last_name" type="text" class="input">
+        </div>
         <div class="group">
           <label for="user" class="label">Username</label>
-          <input id="username" name="username" type="text" class="input">
+          <input id="username1" name="username" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="email" class="label">Email</label>
+          <input id="email" name="email" type="text" class="input">
         </div>
         <div class="group">
           <label for="pass" class="label">Password</label>
-          <input id="password" name="password" type="password" class="input" data-type="password">
+          <input id='password1' name="password" type="password" class="input" data-type="password">
         </div>
         <div class="group">
           <label for="pass" class="label">Confirm Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <input id='password2' type="password" class="input" data-type="password">
         </div>
         <div class="group">
           <input type="submit" class="button" value="Sign Up">
